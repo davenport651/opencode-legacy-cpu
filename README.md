@@ -18,11 +18,12 @@
 > `Illegal instruction`. See [README.legacy-cpu.md](README.legacy-cpu.md) for
 > the fork-specific docs, build instructions, and the `node-runtime` branch.
 
-This fork is maintained by one busy TechDad and his OpenCode assistant.
-If it keeps your old machine useful, you're welcome to support our token use
-with a coffee — Monero <code>YOUR_MONERO_ADDRESS_HERE</code> or
-[GitHub Sponsors](https://github.com/sponsors/davenport651). No pressure, no
-tracking, and the work stays free regardless.
+> This fork is maintained by one busy TechDad and his OpenCode assistant.
+> If it keeps your old machine useful, you're welcome to support our token use
+> with a coffee via Monero
+> <code>45ynYARcmKcLZrB1kEfjsbCcGByjVqsCnhzAgLpN1xjnTzxRRp8F7tq3bXbnrW929mdRcyBSAHNTzjHap4Wgbc8FTWRaut9</code>
+
+> No pressure, no tracking, and the work stays free regardless.
 
 ---
 
