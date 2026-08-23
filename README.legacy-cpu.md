@@ -59,6 +59,13 @@ safe to upstream into `anomalyco/opencode` since they work under both runtimes.
 
 ## Build it yourself
 
+> **Why does this use Bun if the point is to avoid Bun?** Bun is only the
+> **build-time** toolchain here (the bundler and package manager the opencode
+> repo uses). It is never needed at runtime: the produced
+> `dist/opencode-node/bin/opencode` runs on **Node.js**. You need a machine
+> that can run Bun (any modern CPU) to build it — the *result* is what works
+> on old CPUs.
+
 ```bash
 bun install
 cd packages/opencode
