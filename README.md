@@ -9,6 +9,18 @@
 </p>
 <p align="center">The open source AI coding agent.</p>
 <p align="center">
+  <a href="README.legacy-cpu.md"><img alt="legacy-cpu fork" src="https://img.shields.io/badge/opencode--legacy--cpu-Node.js%20build%20for%20older%20CPUs-8A2BE2?style=for-the-badge"></a>
+</p>
+
+> **This is `opencode-legacy-cpu`** — a fork that builds the CLI for the **Node.js
+> runtime** instead of the Bun runtime, so it runs on older x86-64 CPUs (Core 2
+> Duo "Penryn" and earlier) where official opencode binaries crash with
+> `Illegal instruction`. See [README.legacy-cpu.md](README.legacy-cpu.md) for
+> the fork-specific docs, build instructions, and the `node-runtime` branch.
+
+---
+
+<p align="center">
   <a href="https://opencode.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
   <a href="https://www.npmjs.com/package/opencode-ai"><img alt="npm" src="https://img.shields.io/npm/v/opencode-ai?style=flat-square" /></a>
   <a href="https://github.com/anomalyco/opencode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/opencode/publish.yml?style=flat-square&branch=dev" /></a>
