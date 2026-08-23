@@ -48,6 +48,7 @@ jobs:
 
       - name: Smoke test
         run: |
+          cd packages/opencode
           ./dist/opencode-node/bin/opencode --version
           ./dist/opencode-node/bin/opencode models | head -5
 
