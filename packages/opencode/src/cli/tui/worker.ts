@@ -1,3 +1,5 @@
+import "../../node-shim"
+import "../../node-worker"
 import { Server } from "@/server/server"
 import { InstanceRuntime } from "@/project/instance-runtime"
 import { Rpc } from "@/util/rpc"
