@@ -70,6 +70,11 @@ while [ -h "\$SOURCE" ]; do
   [[ \$SOURCE != /* ]] && SOURCE="\$DIR/\$SOURCE"
 done
 SCRIPT_DIR="\$(cd -P "\$(dirname "\$SOURCE")" >/dev/null 2>&1 && pwd)"
+# The full-screen TUI is unavailable under the Node runtime, so a bare
+# \`opencode\` invocation defaults to the web UI (server + browser).
+if [ \$# -eq 0 ]; then
+  set -- web
+fi
 exec "\${OPENCODE_NODE_BIN:-\$SCRIPT_DIR/node}" "\$(dirname "\$SCRIPT_DIR")/lib/index.js" "\$@"
 `,
 )
