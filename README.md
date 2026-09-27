@@ -17,6 +17,11 @@
 > Duo "Penryn" and earlier) where official opencode binaries crash with
 > `Illegal instruction`. See [README.legacy-cpu.md](README.legacy-cpu.md) for
 > the fork-specific docs, build instructions, and the `node-runtime` branch.
+>
+> **Status: superseded.** Upstream opencode v2.0 now ships an official Node.js
+> build, so this fork is archived for reference — see
+> [README.legacy-cpu.md](README.legacy-cpu.md) for how to build the v2 Node CLI
+> for old CPUs.
 
 > This fork is maintained by one busy TechDad and his OpenCode assistant.
 > If it keeps your old machine useful, you're welcome to support our token use

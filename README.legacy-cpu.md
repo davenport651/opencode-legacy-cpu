@@ -4,6 +4,34 @@ A fork of [opencode](https://github.com/anomalyco/opencode) that builds the CLI
 for the **Node.js runtime** instead of the Bun runtime, so it runs on older
 x86-64 CPUs that Bun cannot support.
 
+## Status: superseded — archived
+
+This fork is no longer needed. Upstream opencode **v2.0** (verified at
+v2.0.18) ships an official **Node.js-runtime** CLI build:
+`packages/cli/script/build-node.ts` produces a self-contained `opencode2-node`
+binary (Node 26.4.0 SEA, no Bun runtime). That build runs on the legacy CPUs
+this fork targeted (Core 2 Duo "Penryn" and earlier) without
+`Illegal instruction`.
+
+> Note the distinction: it is the **Node** build that fixes the crash. The Bun
+> **"baseline"** builds (v1 and v2) still emit `popcnt`/SSE4.2 and crash on
+> pre-SSE4.2 CPUs.
+
+To produce a working binary for an old CPU:
+
+```bash
+git clone https://github.com/anomalyco/opencode.git
+cd opencode && git checkout v2.0.18
+bun install
+cd packages/cli
+OPENCODE_VERSION=2.0.18 OPENCODE_CHANNEL=latest bun script/build-node.ts --target=linux-x64
+./dist/cli-node-linux-x64/bin/opencode2-node --version
+```
+
+Once v2.0 is published to GitHub releases, prefer the official `-node` release
+artifact over building from source (as of this writing v2.0 is tags-only, not
+yet released). The `node-runtime` branch and its history are kept for reference.
+
 ## Why
 
 The official opencode binaries embed the **Bun runtime**. Since Bun 1.1.28 the
